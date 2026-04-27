@@ -3,9 +3,7 @@ module webrtc-audio
 go 1.25.7
 
 require (
-	github.com/golang/glog v1.2.5
 	github.com/kazzmir/opus-go v1.3.0
-	github.com/pion/opus v0.0.0-20260415222007-6599e09d40af
 	github.com/pion/webrtc/v4 v4.2.11
 	github.com/zaf/g711 v1.4.0
 	golang.org/x/net v0.50.0

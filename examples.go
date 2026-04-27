@@ -30,7 +30,7 @@ type Example struct {
 }
 
 func main() {
-	addr := flag.String("address", ":80", "Address to host the HTTP server on.")
+	addr := flag.String("address", ":9000", "Address to host the HTTP server on.")
 	flag.Parse()
 
 	log.Println("Listening on", *addr)
