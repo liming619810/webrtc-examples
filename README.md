@@ -8,11 +8,36 @@ golang webRTC examples
 主要是实际的项目:
 实现实体设备(门禁机)的实时双向通话功能
 
+
+```
+
+# .实现设备<-->web页面 的双向语言通话
+```
+play-from-disk
+流程:
+   接入设备 webscoket音频流-->转码为opus -->web页面
+   web页面(麦克风)-->后段opus转码--> webscoket音频流-->设备
+主要实现功能:
+1 web页面
+  web页面 <--> webscoket (ws://10010) 交换信量
+  面建立 webrtc连接
+  reveice  接受设备上的音频
+  send     接入麦克风,推送麦克风的数据给后段
+2 webrtc-service 
+
+
+
+  
+
+```
+
+# .实现麦克风到后段的音频输出
+```
 'save-to-disk (opus-ogg-ffmpeg ok)' 目前最可行的方案
   接受到麦克风的音频流 --> 保存为 内存中的小文件 --> ffmpeg 转码 G711 --> webscoket(设备)
   生产环境可用的
-
 ```
+
 
 ## 1.设备-->web页面
 ```
