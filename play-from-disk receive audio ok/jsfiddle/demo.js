@@ -78,13 +78,13 @@ function initWebSocket() {
 pc.ontrack = function (event) {
   log(`收到${event.track.kind}轨道`);
   // 视频轨道
-  if (event.track.kind === 'video') {
-    var el = document.createElement(event.track.kind)
-    el.srcObject = event.streams[0]
-    el.autoplay = true
-    el.controls = true
-    document.getElementById('remoteVideos').appendChild(el)
-  }
+  // if (event.track.kind === 'video') {
+  //   var el = document.createElement(event.track.kind)
+  //   el.srcObject = event.streams[0]
+  //   el.autoplay = true
+  //   el.controls = true
+  //   document.getElementById('remoteVideos').appendChild(el)
+  // }
 
   // 音频轨道
   if (event.track.kind === 'audio') {
@@ -136,7 +136,7 @@ pc.onicecandidate = event => {
 }
 
 // 配置音视频收发
-pc.addTransceiver('video', {'direction': 'sendrecv'})
+// pc.addTransceiver('video', {'direction': 'sendrecv'})
 pc.addTransceiver('audio', {'direction': 'sendrecv'})
 
 // 初始化WebSocket
@@ -162,8 +162,6 @@ window.startSession = () => {
 }
 
 // 页面卸载时关闭WebSocket
-window.onbeforeunload = () => {
-  if (ws) {
-    ws.close();
-  }
-};
+
+
+

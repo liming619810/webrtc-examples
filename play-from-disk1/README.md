@@ -41,6 +41,4 @@ Congrats, you have used Pion WebRTC! Now start building something cool
   1.接受webscoket的音频流 G711
   2.转码为opus 
   3.通过webRTC推送给页面，音像播放
-  4.接入页面上的麦克风,把麦克风的数据通过 webrtc 推送给后段,实现了 页面-->后段 --> 设备的音频输出
-  5.实现了 双向语音通话
 ```

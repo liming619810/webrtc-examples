@@ -9,6 +9,8 @@ Browser base64 Session Description<br />
 Golang base64 Session Description<br />
 <textarea id="remoteSessionDescription"> </textarea> <br/>
 <button onclick="window.startSession()"> Start Session </button><br />
+<!-- 新增麦克风控制按钮 -->
+<button onclick="window.toggleMicrophone()"> 开启/关闭麦克风 </button><br/>
 
 <br />
 
@@ -18,6 +20,10 @@ Video<br />
 <!-- 新增音频控件容器 -->
 Audio<br />
 <div id="remoteAudios"></div> <br />
+
+<!-- 新增本地音频预览容器 -->
+Local Audio<br />
+<div id="localAudio"></div> <br />
 
 Logs<br />
 <div id="div"></div>

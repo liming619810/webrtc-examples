@@ -575,6 +575,7 @@ func main() {
 		// }
 	})
 
+	====-----------------------------------------------------------------------
 	// Set the handler for ICE connection state
 	// This will notify you when the peer has connected/disconnected
 	peerConnection.OnICEConnectionStateChange(func(connectionState webrtc.ICEConnectionState) {
@@ -582,7 +583,8 @@ func main() {
 
 		if connectionState == webrtc.ICEConnectionStateConnected {
 			fmt.Println("Ctrl+C the remote client to stop the demo")
-		} else if connectionState == webrtc.ICEConnectionStateFailed || connectionState == webrtc.ICEConnectionStateClosed {
+		} else if connectionState == webrtc.ICEConnectionStateFailed ||
+		 connectionState == webrtc.ICEConnectionStateClosed {
 			if closeErr := oggFile.Close(); closeErr != nil {
 				panic(closeErr)
 			}
